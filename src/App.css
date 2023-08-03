@@ -12,6 +12,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.title{
+  color:whitesmoke;
+  font-style: italic;
+  /* align-self: flex-start; */
 }
 
 .card_div{
@@ -23,9 +30,9 @@
   text-align: center;
   background-color: bisque;
   border-radius: 25px;
-  box-shadow: 5px 5px #888888;
+  box-shadow: 7px 7px rgb(37, 37, 130);
   opacity: 0.7;
-  padding: 8px;
+  padding: 12px;
   flex-direction: column;
 }
 
@@ -50,4 +57,9 @@ button{
   font-style: oblique;
   font-size: small;
   cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1);
+  
 }

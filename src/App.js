@@ -8,22 +8,24 @@ function App() {
   // const []
 
   useEffect(()=>{
-    axios.get('https://api.adviceslip.com/advice')
-    .then(response =>{
-      // console.log(response.data.slip);
-      setAdvice(response.data.slip.advice);
-    })
-    .catch(error =>{
-      console.log(error);
-    },[])
-  })
+   return setdata();
+  }, [])
 
   const setdata = ()=>{
-   const Advice = advice; 
+  //  return window.location.reload(true); 
+  axios.get('https://api.adviceslip.com/advice')
+  .then(response =>{
+    // console.log(response.data.slip);
+    setAdvice(response.data.slip.advice);
+  })
+  .catch(error =>{
+    console.log(error);
+  })
   }
   return (
     <React.Fragment>
     <div className='main_div'>
+    {/* <h1 className='title'>Let's Take Some Good Advice</h1> */}
       <div className='card_div'>
         <h2 className='heading'>{advice}</h2>
          <br></br>
